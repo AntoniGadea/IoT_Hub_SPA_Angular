@@ -15,13 +15,11 @@ export class NavbarComponent implements OnInit {
   constructor(private auth: AuthService, public router: Router) { }
 
   ngOnInit(): void {
-    this.router.events.subscribe( event => {
-      if (event.constructor.name === "NavigationEnd"){
-        this.login = this.auth.isAuth();
-        console.log(this.login);      }
-    })
-  }
+    this.router.events.subscribe(
+     () => this.login = this.auth.isAuth()
+    )
   
+  }
   logOut(){
     this.auth.logOut();
     this.router.navigate(['/login']);
