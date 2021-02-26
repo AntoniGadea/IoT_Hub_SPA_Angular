@@ -29,7 +29,7 @@ export class SpeackerService {
     return this.http.post<Speacker>(this.speakerUrl,speaker,this.httpOptions);
   }
 
-  removePanel(speaker: Speacker): Observable<Speacker>{
+  removeSpeaker(speaker: Speacker): Observable<Speacker>{
     return this.http.delete<Speacker>(this.speakerUrl+speaker.id,this.httpOptions);
   }
 
