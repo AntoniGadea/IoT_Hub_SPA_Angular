@@ -1,0 +1,13 @@
+    <div class="my-3 mx-5 card card-speacker">
+        <div class="card-body text-center">
+            <a class="d-flex justify-content-center" *ngIf="router.url == '/speakers'" (click)="delete()" aria-label="Close">
+                <fa-icon class="" [icon]="close"></fa-icon>
+              </a>
+        <h5 class="card-tittle mt-1 mb-2">{{speaker.name}}</h5>
+        <span class="text-left mr-3">
+            <fa-icon class="fa-2x" [icon]="icon"></fa-icon>
+        </span><br>
+        <span class="text-right ml-4">{{speaker.status}}</span>
+        </div>
+    </div>
+

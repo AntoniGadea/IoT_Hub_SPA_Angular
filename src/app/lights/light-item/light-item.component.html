@@ -1,0 +1,14 @@
+<div class="flip-card m-4 card card-light ">
+    <div class="flip-card-inner border border-warning">
+        <div class="flip-card-front card-body">
+            <h5 class="card-title mb-2">{{light.name}}</h5>
+            <a class="m-2" *ngIf="router.url == '/lights'" (click)="delete()" aria-label="Close">
+                <fa-icon class="" [icon]="close"></fa-icon>
+              </a>
+            <p class="card-text">
+                <fa-icon class="fa-2x" [icon]="icon"></fa-icon><br>
+                <a class="btn btn-secondary rounded-circle" [routerLink]="['/light',light.id]" >Info</a>
+            </p>
+        </div>
+    </div>
+</div>

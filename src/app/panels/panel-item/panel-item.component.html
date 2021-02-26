@@ -1,0 +1,12 @@
+<div class="card m-3" appMoreInfo [show]="hide"> 
+  <a class="m-2" *ngIf="router.url == '/panels'" (click)="delete()" aria-label="Close">
+    <fa-icon class="m-2" [icon]="close"></fa-icon>
+  </a>
+    <div class="card-body">
+      <h5 class="card-title">{{panel.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">ID: {{panel.id}}</h6>
+      <p class="card-text"> {{panel.max | toKw}}</p>
+      <p #hide class="card-text" style="display: none;"> {{panel.production}}</p>
+      <a class="btn btn-secondary" [routerLink]="['/panel',panel.id]" >More Details</a>
+    </div>
+  </div>

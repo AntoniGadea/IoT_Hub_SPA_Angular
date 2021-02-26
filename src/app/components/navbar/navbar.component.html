@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand  navbar-light bg-light d-flex justify-content-center">
+    <div >
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['home']" [routerLinkActive]="['active']">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['lights']" [routerLinkActive]="['active']">Lights</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['panels']" [routerLinkActive]="['active']">Solar Panels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['speakers']" [routerLinkActive]="['active']" >Speackers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="login == false" [routerLink]="['login']" [routerLinkActive]="['active']">Login</a>
+            </li>
+            <button *ngIf="login == true" class="btn btn-danger" (click)="logOut()">LogOut</button>
+        </ul>
+    </div>
+</nav>
