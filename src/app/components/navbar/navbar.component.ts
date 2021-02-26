@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/user/auth.service';
 })
 export class NavbarComponent implements OnInit {
     
-  login: boolean;
+  login: boolean = false;
 
   constructor(private auth: AuthService, public router: Router) { }
 
