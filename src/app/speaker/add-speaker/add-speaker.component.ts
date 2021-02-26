@@ -56,7 +56,9 @@ export class AddSpeakerComponent implements OnInit {
     if (this.formSpeaker.valid) {
       this.speaker = this.formSpeaker.value;
       this.speakerServicio.addSpeakers(this.speaker).subscribe();
-      this.router.navigate(['/speakers']);
+      setTimeout(()=>{
+        this.router.navigate(['/speakers']);
+      },1000)
     } else {
       this.validateAllFormFields(this.formSpeaker);
     }

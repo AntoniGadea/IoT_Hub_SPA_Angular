@@ -22,7 +22,7 @@ close = faWindowClose;
   }
   
   delete(){
-    this.speakerService.removePanel(this.speaker).subscribe();
+    this.speakerService.removeSpeaker(this.speaker).subscribe();
     setTimeout(()=>{
       this.router.navigate(['/home']);
     },1000);
